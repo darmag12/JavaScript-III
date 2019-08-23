@@ -129,7 +129,7 @@ Humanoid.prototype.greet = function(){
     language: 'Elvish',
   });
 
-///  STRETCH WORK!
+///  STRETCH WORK STARTS HERE!
 
 function Hero (heroAttr) {
 

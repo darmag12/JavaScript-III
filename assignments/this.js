@@ -1,11 +1,11 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *    //Window Binding
-* 1. If none of the 3 principals apply then the 'this' keyword will defult to the window object, unless           you are on strict mode then it's just going to be undefined.
+* 1. If none of the 3 principals apply then the 'this' keyword will defult to the window object, unless you are on strict mode then it's just going to be undefined.
      //Implicit Binding
 * 2. Implicit binding is when 'this' is referenced on the left of the dot in a function invocation.
       //New Binding
-* 3. When a function is invoked with the new keyword the 'this' keyword inside that function is bound to the      new object being constructed  which is 'this = {}'
+* 3. When a function is invoked with the new keyword the 'this' keyword inside that function is bound to the new object being constructed  which is 'this = {}'
      //Explicit Binding
 * 4. Explicit binding is the use of .call, .apply and .bind to reference 'this' when invoking a function.
 *
@@ -15,11 +15,19 @@
 // Principle 1
 
 // code example for Window Binding
-function taco (){
-    console.log(`Did you eat my ${this.name}?`)
+let name = {
+food: 'taco',
+meth: function taco (){
+
+    function inner (){
+    console.log(`Did you eat my ${this.food}?`)
+    }
+    inner()
 }
-taco();
-// nobody has seen your taco sir, you should ask the window (:
+}
+
+name.meth();
+// nobody has seen your taco sir (:
  
 
 
